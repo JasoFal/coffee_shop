@@ -1,6 +1,7 @@
 import React from "react";
 import CoffeeList from "./CoffeeList";
 import NewCoffeeForm from "./NewCoffeeForm";
+import CoffeeDetail from "./CoffeeDetails";
 
 class CoffeeControl extends React.Component {
   constructor(props) {
@@ -25,6 +26,11 @@ class CoffeeControl extends React.Component {
     }
   }
 
+  handleChangingSelectedCoffee = (id) => {
+    const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
+    this.setState({selectedCoffee: selectedCoffee});
+  }
+
   handleAddingNewCoffeeToList = (newCoffee) => {
     const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffee);
     this.setState({
@@ -36,7 +42,12 @@ class CoffeeControl extends React.Component {
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
+    if (this.state.selectedCoffee != null) {
+      currentlyVisibleState = <CoffeeDetail
+        coffee={this.state.selectedCoffee}
+      />
+      buttonText = "Return to Coffee List";
+    } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewCoffeeForm
         onNewCoffeeCreation={this.handleAddingNewCoffeeToList}
       />
@@ -44,6 +55,7 @@ class CoffeeControl extends React.Component {
     } else {
       currentlyVisibleState = <CoffeeList
         coffeeList={this.state.mainCoffeeList}
+        onCoffeeSelection={this.handleChangingSelectedCoffee}
       />
       buttonText = "Add Coffee";
     }

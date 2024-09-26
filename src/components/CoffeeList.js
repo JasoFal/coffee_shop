@@ -8,6 +8,7 @@ function CoffeeList(props) {
       <hr />
       {props.coffeeList.sort((coffee1, coffee2) => coffee1.price - coffee2.price).map((coffee) =>
         <Coffee
+          whenCoffeeClicked={props.onCoffeeSelection}
           name={coffee.name}
           origin={coffee.origin}
           roast={coffee.roast}
