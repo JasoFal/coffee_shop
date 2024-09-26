@@ -8,7 +8,6 @@ function Coffee(props) {
       <h3>{props.origin}</h3>
       <h3>{props.price}</h3>
       <h3>{props.roast}</h3>
-      <h3>{props.poundsLeft}</h3>
       <hr/>
     </React.Fragment>
   );
