@@ -43,6 +43,14 @@ class CoffeeControl extends React.Component {
     })
   }
 
+  handleDeletingCoffee = (id) => {
+    const newMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== id);
+    this.setState({
+      mainCoffeeList: newMainCoffeeList,
+      selectedCoffee: null
+    })
+  }
+
   handleChangingSelectedCoffee = (id) => {
     const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
     this.setState({selectedCoffee: selectedCoffee});
@@ -69,6 +77,7 @@ class CoffeeControl extends React.Component {
       currentlyVisibleState = <CoffeeDetail
         coffee={this.state.selectedCoffee}
         onClickingEdit={this.handleEditClick}
+        onClickingDelete={this.handleDeletingCoffee}
       />
       buttonText = "Return to Coffee List";
     } else if (this.state.formVisibleOnPage) {
