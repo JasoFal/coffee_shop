@@ -10,12 +10,14 @@ function CoffeeDetail(props) {
       <h3>{coffee.origin}</h3>
       <h3>${coffee.price}</h3>
       <hr />
+      <button onClick={props.onClickingEdit}>Update Coffee</button>
     </React.Fragment>
   );
 }
 
 CoffeeDetail.propTypes = {
-  coffee: PropTypes.object
+  coffee: PropTypes,
+  onClickingEdit: PropTypes.func
 };
 
 export default CoffeeDetail;
