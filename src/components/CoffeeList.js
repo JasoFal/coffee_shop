@@ -16,6 +16,7 @@ function CoffeeList(props) {
           poundsLeft={coffee.poundsLeft}
           id={coffee.id}
           key={coffee.id}
+          onCoffeePurchase={props.onCoffeePurchase}
         />
       )}
     </React.Fragment>
@@ -24,6 +25,7 @@ function CoffeeList(props) {
 
 CoffeeList.propTypes = {
   coffeeList: PropTypes.array,
+  onCoffeePurchase: PropTypes.func
 };
 
 export default CoffeeList;
