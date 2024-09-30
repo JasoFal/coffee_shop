@@ -16,7 +16,7 @@
 
 Welcome to the coffee shop where you can buy err well coffee. Create/read/edit/delete different coffee and you can even purchase a pound of coffee for however much it is worth.
 
-![Diagram](./coffee-shop-diagram.drawio)
+![Diagram](./diagramCapture.PNG)
 
 ## Setup/Installation Requirements
 
