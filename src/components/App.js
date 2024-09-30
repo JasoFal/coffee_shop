@@ -5,8 +5,14 @@ import CoffeeControl from './CoffeeControl';
 function App() {
   return (
     <React.Fragment>
-      <Header />
-      <CoffeeControl />
+      <div className="container">
+        <div className="row-center">
+          <Header />
+        </div>
+        <div className="row-center">
+          <CoffeeControl />
+        </div>
+      </div>
     </React.Fragment>
   );
 }
