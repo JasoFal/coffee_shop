@@ -20,15 +20,17 @@ Welcome to the coffee shop where you can buy err well coffee. Create/read/edit/d
 
 ## Setup/Installation Requirements
 
-* _In Git Bash type or copy/paste `git clone https://github.com/JasoFal/coffee_shop.git`._
-* _Navigate to directory project was cloned to using git bash using the cd command/file explorer/any other way._
+1. _In Git Bash type or copy/paste `git clone https://github.com/JasoFal/coffee_shop.git`._
+2. _Navigate to directory project was cloned to using git bash using the cd command/file explorer/any other way._
 -----
-* _Install all packages with <mark>$ npm install<mark>_
-* _Build project using webpack with <mark>$ npm run build<mark>_
-* _Start dev server with <mark>$ npm run start<mark>_
+3. _Install all packages with <mark>$ npm install<mark>_
+4. _Build project using webpack with <mark>$ npm run build<mark>_
+5. _Start dev server with <mark>$ npm run start<mark>_
+
+-------
+_Optional_
 
 * _Linting JS files in the <mark>src<mark> folder with <mark>$ npm run lint<mark>_
-* _Run tests with Jest using <mark>$ npm run test<mark>_
 
 ## Known Bugs
 
