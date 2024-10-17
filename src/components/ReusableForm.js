@@ -25,6 +25,12 @@ function ReusableForm(props) {
           name="price"
           placeholder="Price"
         />
+        <p>The weight of a single burlap sack of coffee is usually 130#</p>
+        <input
+          text="text"
+          name="weight"
+          placeholder="Weight"
+        />
         <button type="submit">{props.buttonText}</button>
       </form>
     </React.Fragment>
