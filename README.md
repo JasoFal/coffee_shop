@@ -14,7 +14,7 @@
 
 ## Description
 
-Welcome to the coffee shop where you can buy err well coffee. Create/read/edit/delete different coffee and you can even purchase a pound of coffee for however much it is worth.
+Welcome to the coffee shop where you can buy coffee. Create/read/edit/delete different coffee. You can set the name, origin, roast, price and total weight of all coffee in storage. It can even do online purchases (disclaimer: can not actually do online purchases).
 
 ![Diagram](./diagramCapture.PNG)
 
