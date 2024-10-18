@@ -12,7 +12,7 @@ function EditCoffeeForm(props) {
       origin: event.target.origin.value,
       roast: event.target.roast.value,
       price: parseInt(event.target.price.value),
-      poundsLeft: parseInt(event.target.poundsLeft),
+      poundsLeft: parseInt(event.target.poundsLeft.value),
       id: coffee.id
     });
   }

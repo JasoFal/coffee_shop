@@ -5,6 +5,7 @@ import CoffeeDetail from "./CoffeeDetails";
 import EditCoffeeForm from "./EditCoffeeForm";
 
 class CoffeeControl extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +20,8 @@ class CoffeeControl extends React.Component {
     if (this.state.selectedCoffee != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedCoffee: null
+        selectedCoffee: null,
+        editing: false
       });
     } else {
       this.setState(prevState => ({
@@ -52,6 +54,7 @@ class CoffeeControl extends React.Component {
   }
 
   handleChangingSelectedCoffee = (id) => {
+    console.log(id);
     const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
     this.setState({selectedCoffee: selectedCoffee});
   }

@@ -28,7 +28,7 @@ function ReusableForm(props) {
         <p>The weight of a single burlap sack of coffee is usually 130#</p>
         <input
           text="text"
-          name="weight"
+          name="poundsLeft"
           placeholder="Weight"
         />
         <button type="submit">{props.buttonText}</button>
