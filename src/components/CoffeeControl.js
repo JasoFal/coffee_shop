@@ -54,7 +54,6 @@ class CoffeeControl extends React.Component {
   }
 
   handleChangingSelectedCoffee = (id) => {
-    console.log(id);
     const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
     this.setState({selectedCoffee: selectedCoffee});
   }
